@@ -16,11 +16,9 @@ let KeyCode = {
   piano7: 'k',
   piano8: 'j',
   text: 'n',
-  text2: '¡',
   guitar: 'z',
-  guitar2: 'x',
   bg: 'b',
-  recursive: 'r',
+  face: 'r',
 }
 
 @Component({
@@ -46,7 +44,7 @@ export class CanvasPageComponent implements OnInit {
       document.getElementById('text').style.opacity = "0";
     }
 
-    if (key == KeyCode.recursive) {
+    if (key == KeyCode.face) {
       this.canvas.clearCanvasFace();
     }
   }
@@ -122,10 +120,6 @@ export class CanvasPageComponent implements OnInit {
       document.getElementById('text').style.opacity = "1";
     }
 
-    if (key === KeyCode.text2) {
-      document.getElementById('text-thanks').style.opacity = "1";
-    }
-
     if (key === KeyCode.guitar) {
       this.canvas.demoLines();
     }
@@ -134,7 +128,7 @@ export class CanvasPageComponent implements OnInit {
       this.canvas.demoBg();
     }
 
-    if (key === KeyCode.recursive) {
+    if (key === KeyCode.face) {
       this.canvas.demoRecursive();
     }
   }
