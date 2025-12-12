@@ -1,14 +1,14 @@
 # VJ
 
 - Visual Joker
-- Make it with Angular (I don't remember why)
+- Angular (I don't remember why)
 
 # Motivation
 - A bunch of visualizations to have fun while listening any song.
 
 # Give it a try!
 
-- [!!!!](https://byrongbp.github.io/canvas-vj-app/fckthisshit)
+- [!!!!](https://byrongbp.github.io/canvas-vj-app/)
 - Controls:
 ```
 fireworks: 'click',
