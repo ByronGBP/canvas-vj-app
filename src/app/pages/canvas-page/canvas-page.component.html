@@ -1,4 +1,3 @@
-
 <div id="canvas-container">
 
   <canvas id="bg-canvas"></canvas>
@@ -10,5 +9,27 @@
   <canvas id="recursive-draw"></canvas>
   <div id="text">
     {{text}}
+  </div>
+  <div class="controls-container">
+    <ul [@expandCollapse]="expanded ? 'expanded' : 'collapsed'">
+      <li>fireworks > <span>click</span></li>
+      <li>particles > <span>space</span></li>
+      <li>text > <span>N</span></li>
+      <li>wave > <span>Z</span></li>
+      <li>face > <span>R</span></li>
+      <li>background static > <span>B</span></li>
+      <li>background 1 > <span>W</span></li>
+      <li>background 2 > <span>Q</span></li>
+      <li>background 3 > <span>E</span></li>
+      <li>quadrilateral 1 > <span>P</span></li>
+      <li>quadrilateral 2 > <span>O</span></li>
+      <li>quadrilateral 3 > <span>I</span></li>
+      <li>quadrilateral 4 > <span>U</span></li>
+      <li>quadrilateral 5 > <span>Ñ</span></li>
+      <li>quadrilateral 6 > <span>L</span></li>
+      <li>quadrilateral 7 > <span>K</span></li>
+      <li>quadrilateral 8 > <span>J</span></li>
+    </ul>
+    <button (click)="toggle()">Controls</button>
   </div>
 </div>

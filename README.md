@@ -8,7 +8,7 @@
 
 # Give it a try!
 
-- [!!!!](https://fuckthatshit.herokuapp.com/fckthisshit)
+- [!!!!](https://byrongbp.github.io/canvas-vj-app/fckthisshit)
 - Controls:
 ```
 fireworks: 'click',

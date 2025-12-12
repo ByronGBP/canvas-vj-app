@@ -81,8 +81,9 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_canvas_page_canvas_page_component__ = __webpack_require__("../../../../../src/app/pages/canvas-page/canvas-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_canvas_page_canvas_page_component__ = __webpack_require__("../../../../../src/app/pages/canvas-page/canvas-page.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -94,9 +95,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
-    { path: 'fckthisshit', component: __WEBPACK_IMPORTED_MODULE_4__pages_canvas_page_canvas_page_component__["a" /* CanvasPageComponent */] },
-    { path: '**', redirectTo: '/fckthisshit', pathMatch: 'full' }
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_5__pages_canvas_page_canvas_page_component__["a" /* CanvasPageComponent */] },
+    { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -104,15 +106,16 @@ var AppModule = (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_4__pages_canvas_page_canvas_page_component__["a" /* CanvasPageComponent */]
+                __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_5__pages_canvas_page_canvas_page_component__["a" /* CanvasPageComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */].forRoot(routes)
             ],
             providers: [],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -130,7 +133,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#canvas-container {\n    width: 100vw;\n    height: 100vh;\n    font-family: Futura, sans-serif;\n  }\n  \n  #fire-canvas {\n    position: absolute;\n    z-index: 21;\n    width: 100vw;\n    height: 100vh;\n  }\n  \n  #recursive-draw {\n    position: absolute;\n    z-index: 11;\n    width: 100vw;\n    height: 100vh;\n  }\n  \n  #canvas {\n    position: absolute;\n    z-index: 5;\n    width: 100vw;\n    height: 100vh;\n  }\n  \n  #piano-canvas {\n    position: absolute;\n    z-index: 4;\n    width: 100vw;\n    height: 100vh;\n  }\n  \n  #guitar-canvas {\n    position: absolute;\n    z-index: 3;\n    width: 100vw;\n    height: 100vh;\n  }\n  \n  #drums-canvas {\n    position:absolute;\n    z-index: 2;\n    width: 100vw;\n    height: 100vh;\n  }\n  \n  #bg-canvas {\n    position:absolute;\n    z-index: 1;\n    width: 100vw;\n    height: 100vh;\n    background: black;\n  }\n  \n  #text {\n    opacity: 0;\n    position: absolute;\n    min-height: 100vh;\n    width: 100vw;\n    z-index: 10;\n    color: #fff;\n    text-transform: uppercase;\n    font-size: 8vmin;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    text-align: center;\n  }\n  \n  ", ""]);
+exports.push([module.i, "#canvas-container {\n  width: 100vw;\n  height: 100vh;\n  font-family: Futura, sans-serif;\n}\n\n#fire-canvas {\n  position: absolute;\n  z-index: 21;\n  width: 100vw;\n  height: 100vh;\n}\n\n#recursive-draw {\n  position: absolute;\n  z-index: 11;\n  width: 100vw;\n  height: 100vh;\n}\n\n#canvas {\n  position: absolute;\n  z-index: 5;\n  width: 100vw;\n  height: 100vh;\n}\n\n#piano-canvas {\n  position: absolute;\n  z-index: 4;\n  width: 100vw;\n  height: 100vh;\n}\n\n#guitar-canvas {\n  position: absolute;\n  z-index: 3;\n  width: 100vw;\n  height: 100vh;\n}\n\n#drums-canvas {\n  position: absolute;\n  z-index: 2;\n  width: 100vw;\n  height: 100vh;\n}\n\n#bg-canvas {\n  position: absolute;\n  z-index: 1;\n  width: 100vw;\n  height: 100vh;\n  background: black;\n}\n\n#text {\n  opacity: 0;\n  position: absolute;\n  min-height: 100vh;\n  width: 100vw;\n  z-index: 10;\n  color: #fff;\n  text-transform: uppercase;\n  font-size: 8vmin;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  text-align: center;\n}\n\n\n.controls-container {\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  padding: 30px;\n  color: #fff;\n  z-index: 100;\n}\n\n.controls-container ul {\n  margin-bottom: 20px;\n  border: 1px solid white;\n  padding: 20px;\n}\n\n.controls-container li {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n\n.controls-container li span {\n  margin-left: 50px;\n}\n\n.controls-container button {\n  color: white;\n  background-color: transparent;\n  padding: 10px 20px;\n  border-radius: 1px;\n  border-color: white;\n  font-family: inherit;\n}", ""]);
 
 // exports
 
@@ -143,7 +146,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/canvas-page/canvas-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div id=\"canvas-container\">\n\n  <canvas id=\"bg-canvas\"></canvas>\n  <canvas id=\"drums-canvas\"></canvas>\n  <canvas id=\"guitar-canvas\"></canvas>\n  <canvas id=\"piano-canvas\"></canvas>\n  <canvas id=\"canvas\"></canvas>\n  <canvas id=\"fire-canvas\"></canvas>\n  <canvas id=\"recursive-draw\"></canvas>\n  <div id=\"text\">\n    {{text}}\n  </div>\n</div>\n"
+module.exports = "<div id=\"canvas-container\">\n\n  <canvas id=\"bg-canvas\"></canvas>\n  <canvas id=\"drums-canvas\"></canvas>\n  <canvas id=\"guitar-canvas\"></canvas>\n  <canvas id=\"piano-canvas\"></canvas>\n  <canvas id=\"canvas\"></canvas>\n  <canvas id=\"fire-canvas\"></canvas>\n  <canvas id=\"recursive-draw\"></canvas>\n  <div id=\"text\">\n    {{text}}\n  </div>\n  <div class=\"controls-container\">\n    <ul [@expandCollapse]=\"expanded ? 'expanded' : 'collapsed'\">\n      <li>fireworks > <span>click</span></li>\n      <li>particles > <span>space</span></li>\n      <li>text > <span>N</span></li>\n      <li>wave > <span>Z</span></li>\n      <li>face > <span>R</span></li>\n      <li>background static > <span>B</span></li>\n      <li>background 1 > <span>W</span></li>\n      <li>background 2 > <span>Q</span></li>\n      <li>background 3 > <span>E</span></li>\n      <li>quadrilateral 1 > <span>P</span></li>\n      <li>quadrilateral 2 > <span>O</span></li>\n      <li>quadrilateral 3 > <span>I</span></li>\n      <li>quadrilateral 4 > <span>U</span></li>\n      <li>quadrilateral 5 > <span>Ñ</span></li>\n      <li>quadrilateral 6 > <span>L</span></li>\n      <li>quadrilateral 7 > <span>K</span></li>\n      <li>quadrilateral 8 > <span>J</span></li>\n    </ul>\n    <button (click)=\"toggle()\">Controls</button>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -154,6 +157,7 @@ module.exports = "\n<div id=\"canvas-container\">\n\n  <canvas id=\"bg-canvas\">
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CanvasPageComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_canvas__ = __webpack_require__("../../../../../src/app/utils/canvas.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_animations__ = __webpack_require__("../../../animations/esm5/animations.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -163,6 +167,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 var KeyCode = {
@@ -186,7 +191,11 @@ var KeyCode = {
 var CanvasPageComponent = (function () {
     function CanvasPageComponent() {
         this.text = "Fuck this shit!!";
+        this.expanded = false;
     }
+    CanvasPageComponent.prototype.toggle = function () {
+        this.expanded = !this.expanded;
+    };
     CanvasPageComponent.prototype.onKeyUp = function (ev) {
         ev.preventDefault();
         var key = ev.key.toLowerCase();
@@ -279,7 +288,24 @@ var CanvasPageComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-canvas-page',
             template: __webpack_require__("../../../../../src/app/pages/canvas-page/canvas-page.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/canvas-page/canvas-page.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/canvas-page/canvas-page.component.css")],
+            animations: [
+                Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* trigger */])('expandCollapse', [
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["g" /* state */])('collapsed', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                        height: '0px',
+                        opacity: 0,
+                        overflow: 'hidden'
+                    })),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["g" /* state */])('expanded', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                        height: '*',
+                        opacity: 1,
+                        overflow: 'hidden'
+                    })),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* transition */])('collapsed <=> expanded', [
+                        Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* animate */])('300ms ease')
+                    ])
+                ])
+            ]
         }),
         __metadata("design:paramtypes", [])
     ], CanvasPageComponent);

@@ -1,6 +1,13 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 
 import { Canvas } from '../../utils/canvas'
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate
+} from '@angular/animations';
 
 let KeyCode = {
   drums1: 'w',
@@ -24,12 +31,37 @@ let KeyCode = {
 @Component({
   selector: 'app-canvas-page',
   templateUrl: './canvas-page.component.html',
-  styleUrls: ['./canvas-page.component.css']
+  styleUrls: ['./canvas-page.component.css'],
+  animations: [
+    trigger('expandCollapse', [
+      state('collapsed', style({
+        height: '0px',
+        opacity: 0,
+        overflow: 'hidden'
+      })),
+
+      state('expanded', style({
+        height: '*',    // auto height
+        opacity: 1,
+        overflow: 'hidden'
+      })),
+
+      transition('collapsed <=> expanded', [
+        animate('300ms ease')
+      ])
+    ])
+  ]
 })
 export class CanvasPageComponent implements OnInit {
 
   canvas;
   text = "Fuck this shit!!"
+
+  expanded = false;
+
+  toggle() {
+    this.expanded = !this.expanded;
+  }
 
   @HostListener('document:keyup', ['$event'])
   onKeyUp(ev: KeyboardEvent) {
